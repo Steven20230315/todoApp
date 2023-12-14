@@ -1,0 +1,98 @@
+.btn {
+  display: flex;
+  background-color: transparent;
+  border: 1px solid rgba(0, 0, 0, 0.6);
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  /* Add a transition for a smooth color change */
+}
+
+.btn_group {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-top: 0.4rem;
+
+}
+
+.redButton {
+  background-color: red;
+  /* Set the background color to red */
+  color: white;
+  /* Set the text color to white */
+  border: 1px solid red;
+  /* Match the border color to the background color */
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.redButton:hover {
+  background-color: darkred;
+  /* Change the background color on hover */
+}
+
+.greenButton {
+  background-color: lightgreen;
+  /* Set the background color to light green */
+  color: rgb(87, 129, 80);
+  /* Set the text color to white */
+  border: 1px solid lightgreen;
+  /* Match the border color to the background color */
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.greenButton:hover {
+  background-color: limegreen;
+  /* Change the background color on hover */
+}
+
+.btn:hover {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  padding: 1.5rem 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.input {
+  width: 100%;
+  padding: 0.8rem;
+  margin: 0.25rem 0;
+  background-color: transparent;
+  border: 1px solid rgba(0, 0, 0, 0.6);
+  border-radius: 5px;
+  color: #CCCCCC;
+}
+
+.dropdown_group {
+  display: flex;
+  width: 100%;
+  justify-content: flex-start;
+  gap: 1rem;
+  margin-top: 0.4rem;
+}
+
+.dropdown {
+  background-color: transparent;
+  border: 1px solid rgba(0, 0, 0, 0.6);
+  border-radius: 3px;
+  padding: 0.5rem 0.5rem;
+  color: #CCCCCC;
+}

@@ -1,0 +1,50 @@
+.task_status_dropdown {
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* height: 24px; */
+  /* width: 24px; */
+  border: 1px solid #3d3d3d;
+  background-color: transparent;
+  font-size: 13px;
+  border-radius: 5px;
+  padding: 6px 8px;
+  font-size: 0.7rem;
+
+  &:hover,
+  &:focus {
+    background-color: #343434;
+  }
+  > * {
+    font-size: 0.8rem;
+  }
+}
+
+.task_status_dropdown_option {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  left: -9px;
+  top: 31px;
+  border: 2px solid #3d3d3d;
+  border-radius: 10px;
+  width: 90px;
+  box-sizing: content-box;
+  background-color: #282828;
+  color: #b3b3b3;
+  justify-content: center;
+
+  >div {
+    padding: 6px 7px;
+
+    &:hover {
+      background-color: #3d3d3d;
+    }
+
+    >span {
+      height: 1.7rem;
+    }
+  }
+}

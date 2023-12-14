@@ -1,0 +1,29 @@
+.add_task_btn {
+  margin-top: 0.5rem;
+  background-color: transparent;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  gap: 6px;
+  color: grey;
+
+  >span {
+    color: rgb(151, 21, 21);
+    height: 17px;
+    width: 17px;
+  }
+
+  &:hover {
+    color: rgb(151, 21, 21);
+
+    >span {
+      color: white;
+      transition: color 0.3s;
+      border: 1px solid transparent;
+      border-radius: 50%;
+      background-color: rgb(151, 21, 21);
+    }
+  }
+}

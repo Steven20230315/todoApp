@@ -1,0 +1,58 @@
+.comment_action_dropdown {
+  height: 26px;
+  width: 26px;
+  position: relative;
+  background-color: transparent;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  &:hover,
+  &:focus {
+    background-color: #343434;
+  }
+}
+
+.comment_action_group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  background-color: #282828;
+  min-width: 80px;
+  position: absolute;
+  border: 1px solid #3d3d3d;
+  border-radius: 5px;
+
+  >button {
+    background-color: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+    padding: 0.5rem;
+
+    &:hover {
+      background-color: #343434;
+    }
+  }
+}
+
+.comment_form_container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem;
+}
+
+.comment_delete_btn {
+  background-color: transparent;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  &:hover,
+  &:focus {
+    background-color: #343434;
+  }
+}
+.comment_date{
+  font-size: 12px;
+  color: gray;
+}

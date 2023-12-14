@@ -1,0 +1,19 @@
+.task_edit_form_action_group {
+  position: relative;
+  top: -9px;
+  left: -20px;
+  display: flex;
+  gap: 4px;
+  /* border: 1px solid gold; */
+
+  >button {
+    border: none;
+    background-color: transparent;
+    color: white;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #4d4d4d;
+    }
+  }
+}

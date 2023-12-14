@@ -1,0 +1,125 @@
+.task_container {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  /* border: 3px solid white; */
+  border-bottom: 1px solid #3d3d3d;
+  margin-top: 1rem;
+  min-height: 83px;
+  height: fit-content;
+  position: relative;
+
+}
+
+
+.task_checkbox_btn {
+  position: relative;
+  margin: 0px 6px 0 10px;
+  z-index: 1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 24px;
+  width: 24px;
+  border: none;
+  background-color: transparent;
+  font-size: 13px;
+}
+
+.task_checkbox_circle {
+  position: absolute;
+  box-sizing: border-box;
+  /* border: 1px solid white; */
+  width: 18px;
+  top: 3px;
+  left: 3px;
+  height: 18px;
+  border-radius: 50%;
+}
+
+.task_edit_form {
+  position: absolute;
+  /* border: 2px solid green; */
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.task_edit_form_title_input {
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  font-size: 1.2rem;
+  color: white;
+  margin-top: 8px;
+  overflow: hidden;
+}
+
+.task_content_container {
+  position: absolute;
+  flex: 1;
+  padding: 0;
+  cursor: pointer;
+  /* border: 2px solid rgb(151, 21, 21); */
+  width: 95%;
+  top: 0px;
+  left: 24px;
+}
+
+.task_content_container_alignment {
+  /* border: 1px solid yellow; */
+  display: flex;
+  flex-direction: column;
+  margin-left: 0.5rem;
+  width: 100%;
+  height: 100%;
+  gap: 0.5rem;
+}
+
+.task_edit_form_action_group {
+  position: absolute;
+  top: 2px;
+  left: 87%;
+  display: flex;
+  gap: 4px;
+  /* border: 1px solid gold; */
+
+  >button {
+    border: none;
+    background-color: transparent;
+    color: white;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #4d4d4d;
+    }
+  }
+}
+
+.task_dueDate {
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+}
+
+.task_dueDate.overdue {
+  color: rgb(151, 21, 21)
+}
+
+.task_title {
+  color: white;
+  font-size: 1.2rem;
+  overflow: hidden;
+}
+
+.task_description {
+  color: white;
+  font-size: 0.8rem;
+  opacity: 0.8;
+  height: 12px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}

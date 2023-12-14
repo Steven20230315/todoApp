@@ -1,0 +1,63 @@
+  .modal_overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: 'rgba(0, 0, 0, .7)';
+    z-index: 1000,
+  }
+
+  .modal_content {
+    background-color: rgb(24, 19, 19);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    height: 90vh;
+    width: 75vw;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    border-radius: 10px;
+  }
+
+  .task_main_content_container {
+    >* {
+      color: white;
+      margin: 0.5rem;
+    }
+  }
+
+
+  .task_main_content_action {
+    >div>* {
+      background-color: transparent;
+      color: rgba(255, 255, 255, 0.8);
+      border: none;
+    }
+  }
+
+  .task_main_content_subtask {
+    display: flex;
+    margin-top: 2rem;
+    border: 1px solid white;
+
+    >button {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  .task_main_content_comments {
+    margin-left: 2.5rem;
+    display: flex;
+    margin-top: 2rem;
+    border: 1px solid grey;
+    border-radius: 7px;
+  }
+
+  .task_main_content_comments_form{
+    > textarea {
+      background-color: transparent;
+      border-radius: 7px;
+    }
+  }

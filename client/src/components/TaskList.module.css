@@ -1,0 +1,197 @@
+.hovered_component {
+  margin: 1rem 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 20px;
+  transition: background-color 0.3s;
+  /* Align content and buttons to opposite sides */
+  align-items: center;
+  /* Vertically center content and buttons */
+
+}
+
+.title {
+  display: flex;
+  justify-content: space-between;
+  color: white;
+}
+
+.hovered_component.hovered {
+  background-color: #f0f0f0;
+}
+
+.content h5 {
+  margin: 0;
+  /* Remove default margin for the title */
+}
+
+.buttons button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.buttons button:hover {
+  background-color: #0056b3;
+}
+
+.description {
+  margin-top: 6px;
+  font-size: 0.6rem;
+  color: #9b9696;
+}
+
+.dueDate {
+  font-size: 0.75rem;
+  font-weight: 400;
+  margin-top: 6px;
+  color: rgb(186, 93, 93);
+}
+
+/* CSS styles for the modal overlay */
+.modal_overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  /* Semi-transparent background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  /* Ensure the modal is on top of other content */
+}
+
+/* CSS styles for the modal content */
+.modal_content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn {
+  display: flex;
+  background-color: transparent;
+  border: 1px solid rgba(0, 0, 0, 0.6);
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  /* Add a transition for a smooth color change */
+}
+
+.btn_group {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-top: 0.4rem;
+
+}
+
+.redButton {
+  background-color: red;
+  /* Set the background color to red */
+  color: white;
+  /* Set the text color to white */
+  border: 1px solid red;
+  /* Match the border color to the background color */
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.redButton:hover {
+  background-color: darkred;
+  /* Change the background color on hover */
+}
+
+.greenButton {
+  background-color: lightgreen;
+  /* Set the background color to light green */
+  color: rgb(87, 129, 80);
+  /* Set the text color to white */
+  border: 1px solid lightgreen;
+  /* Match the border color to the background color */
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.greenButton:hover {
+  background-color: limegreen;
+  /* Change the background color on hover */
+}
+
+.btn:hover {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  padding: 1.5rem 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.input {
+  width: 100%;
+  padding: 0.8rem;
+  margin: 0.25rem 0;
+  background-color: transparent;
+  border: 1px solid rgba(0, 0, 0, 0.6);
+  border-radius: 5px;
+  color: #CCCCCC;
+}
+
+.dropdown_group {
+  display: flex;
+  width: 100%;
+  justify-content: flex-start;
+  gap: 1rem;
+  margin-top: 0.4rem;
+}
+
+.dropdown {
+  background-color: transparent;
+  border: 1px solid rgba(0, 0, 0, 0.6);
+  border-radius: 3px;
+  padding: 0.5rem 0.5rem;
+  color: #CCCCCC;
+}
+
+/* CSS styles for the modal overlay */
+.modal_overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  /* Semi-transparent background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  /* Ensure the modal is on top of other content */
+}
+
+/* CSS styles for the modal content */
+.modal_content {
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
