@@ -6,8 +6,8 @@ import {
 	TASK_PRIORITY,
 	TASK_STATUS,
 } from '../utils/constants.js';
-import mongoose from 'mongoose';
 import Task from '../models/TaskModel.js';
+import mongoose from 'mongoose';
 import User from '../models/UserModel.js';
 import bcrypt from 'bcryptjs';
 const withValidationErrors = (validateValues) => {
