@@ -45,27 +45,6 @@ export const validateTaskInput = withValidationErrors([
 	body('description').notEmpty().withMessage('Description is required'),
 ]);
 
-export const validateIdParam = withValidationErrors([
-	param('id').custom(async (value) => {
-		const isValidId = mongoose.Types.ObjectId.isValid(value);
-		if (!isValidId) {
-			throw new BadRequestError('Invalid MongoDB id');
-		}
-		const job = await Job.findById(value);
-		if (!job) {
-			// you can not pass id here. It will be undefined. You have to pass value
-			// throw new NotFoundError(`No job with id ${id}`);
-			throw new NotFoundError(`No job with id ${value}`);
-		}
-		const isAdmin = req.user.role === 'admin';
-		const isOwner = req.user.userId === job.createdBy.toString();
-		if (!isAdmin && !isOwner) {
-			throw new BadRequestError(
-				'You are not authorized to perform this action'
-			);
-		}
-	}),
-]);
 
 // validate id param for task. It will check if the task exists and if the user is authorized(admin or owner). It is used when updating task or deleting task
 export const validateIdParam1 = withValidationErrors([
