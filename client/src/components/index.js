@@ -5,5 +5,4 @@ export { default as BigSidebar } from './BigSidebar';
 export { default as FormRow } from './FormRow';
 export { default as LogoutContainer } from './LogoutContainer';
 export { default as FormSelect } from './FormSelect';
-export { default as TasksContainer } from './TasksContainer';
 export { default as FormTextarea } from './FormTextarea';
