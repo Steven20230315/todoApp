@@ -7,6 +7,7 @@ import {
 	Login,
 	Register,
 	UiTesting,
+	Today,
 } from './pages';
 import customFetch from './utils/customFetch.js';
 
@@ -15,7 +16,6 @@ import { action as loginAction } from './pages/Login.jsx';
 import { loader as dashboardLoader } from './pages/DashboardLayout.jsx';
 import { action as UiTestingAction } from './pages/UiTesting';
 import { loader as UiTestingLoader } from './pages/UiTesting';
-// import { action as updateTaskAction } from './components/TaskList';
 
 export const checkDefaultTheme = () => {
 	localStorage.setItem('dark-theme', true);
@@ -75,7 +75,10 @@ const router = createBrowserRouter([
 						action: UiTestingAction,
 						loader: UiTestingLoader,
 					},
-					
+					{
+						path: 'todayy',
+						element: <Today />,
+					},
 				],
 			},
 		],

@@ -76,6 +76,10 @@ html {
   --text-color: var(--grey-900);
   --background-secondary-color: var(--white);
   --text-secondary-color: var(--grey-500);
+
+
+  --add-task-btn-color-idle: #808080;
+  --add-task-btn-color-hover: #de4c4a;
 }
 
 .dark-theme {
@@ -183,6 +187,14 @@ ul {
 }
 
 /* buttons */
+button {
+  cursor: pointer;
+  color: white;
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
 
 .btn {
   cursor: pointer;
