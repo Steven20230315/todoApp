@@ -6,24 +6,16 @@ import {
 	Landing,
 	Login,
 	Register,
-	AddTask,
-	AllTasks,
-	EditTask,
 	UiTesting,
+	Today,
 } from './pages';
 import customFetch from './utils/customFetch.js';
 
 import { action as registerAction } from './pages/Register.jsx';
 import { action as loginAction } from './pages/Login.jsx';
 import { loader as dashboardLoader } from './pages/DashboardLayout.jsx';
-import { action as addTaskAction } from './pages/AddTask.jsx';
-import { loader as allTasksLoader } from './pages/AllTasks';
-import { loader as allTasksLoader1 } from './pages/EditTask';
-import { action as addNewTaskAction } from './pages/EditTask';
-import { action as TaskAction } from './pages/AllTasks';
 import { action as UiTestingAction } from './pages/UiTesting';
 import { loader as UiTestingLoader } from './pages/UiTesting';
-// import { action as updateTaskAction } from './components/TaskList';
 
 export const checkDefaultTheme = () => {
 	localStorage.setItem('dark-theme', true);
@@ -84,22 +76,8 @@ const router = createBrowserRouter([
 						loader: UiTestingLoader,
 					},
 					{
-						path: 'addTask',
-						element: <AddTask />,
-						loader: allTasksLoader,
-						action: addTaskAction,
-					},
-					{
-						path: 'test',
-						element: <EditTask />,
-						action: addNewTaskAction,
-						loader: allTasksLoader1,
-					},
-					{
-						path: 'testingUiDesign',
-						element: <UiTesting />,
-						action: UiTestingAction,
-						loader: UiTestingLoader,
+						path: 'todayy',
+						element: <Today />,
 					},
 				],
 			},

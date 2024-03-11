@@ -8,14 +8,11 @@ export default function Landing() {
 			<div className='container page'>
 				<div className='info'>
 					<h1>
-						<Logo />
+						<Logo width={100} height={100} />
 						Task <span>tracking </span>app
 					</h1>
 					<p>
-						Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic
-						molestiae consectetur fugiat provident accusantium fuga quasi quam,
-						nobis voluptates assumenda magni distinctio similique natus, modi
-						voluptatibus dolor alias iusto aspernatur.
+						A minimalistic task tracking app. Design to help you stay organized. 
 					</p>
 					<Link to='/register' className='btn register-link'>
 						Register

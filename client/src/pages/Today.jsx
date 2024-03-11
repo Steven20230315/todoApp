@@ -1,5 +1,10 @@
-export default function AddJob() {
-  return (
-    <h1>Today</h1>
-  )
+import AddTaskBtn from '../components/UI/AddTaskBtn';
+
+export default function Today() {
+	return (
+		<div style={{ color: 'white' }}>
+			Today
+			<AddTaskBtn />
+		</div>
+	);
 }

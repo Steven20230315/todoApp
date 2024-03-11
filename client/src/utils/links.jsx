@@ -8,6 +8,7 @@ export const links = [
 	{ text: 'all task', path: '', icon: <MdQueryStats /> },
 	{ text: 'Today', path: 'today', icon: <FaWpforms /> },
 	{ text: 'overdue', path: 'overdue', icon: <MdCalendarMonth /> },
+	{ text: 'today', path: 'todayy', icon: <MdCalendarMonth /> },
 	// { text: 'UiTesting', path: 'testingUiDesign', icon: <MdCalendarMonth /> },
 
 	// { text: 'stats', path: 'stats', icon: <IoBarChartSharp /> },

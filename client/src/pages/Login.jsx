@@ -35,8 +35,8 @@ export default function Login() {
 				<div style={{ marginLeft: '8rem' }}>
 					<svg
 						xmlns='http://www.w3.org/2000/svg'
-						xmlns:xlink='http://www.w3.org/1999/xlink'
-						xmlns:svgjs='http://svgjs.dev/svgjs'
+						xmlnsXlink='http://www.w3.org/1999/xlink'
+						xmlnsSvgjs='http://svgjs.dev/svgjs'
 						version='1.1'
 						width='50'
 						height='50'
@@ -45,7 +45,7 @@ export default function Login() {
 						<g transform='matrix(1,0,0,1,-0.431486880466764,-0.4312711370263287)'>
 							<svg
 								xmlns='http://www.w3.org/2000/svg'
-								xmlns:xlink='http://www.w3.org/1999/xlink'
+								xmlnsXlink='http://www.w3.org/1999/xlink'
 								viewBox='0 0 343 343'
 								data-background-color='#ffffff'
 								preserveAspectRatio='xMidYMid meet'
@@ -84,8 +84,8 @@ export default function Login() {
 														cy='171.42577925887693'
 														fill='#d33327'
 														stroke='transparent'
-														stroke-width='0'
-														fill-opacity='1'
+														strokeWidth='0'
+														fillOpacity='1'
 														data-fill-palette-color='tertiary'
 													/>
 												</g>
@@ -138,7 +138,6 @@ export default function Login() {
 																											opacity='1'
 																											transform='matrix(1,0,0,1,0,0)'
 																											fill='#ffffff'
-																											class='wordmark-text-0'
 																											data-fill-palette-color='quaternary'
 																											id='text-0'
 																										/>
@@ -165,10 +164,9 @@ export default function Login() {
 																						y='0'
 																						viewBox='10.1 5.2 78.4 90'
 																						enableBackground='new 0 0 100 100'
-																						xmlSspace='preserve'
+																						xmlspace='preserve'
 																						height='82.62169136976277'
 																						width='71.97267337099335'
-																						class='icon-icon-0'
 																						data-fill-palette-color='quaternary'
 																						id='icon-0'
 																					>
