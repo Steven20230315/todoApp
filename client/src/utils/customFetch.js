@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const customFetch = axios.create({
-	baseURL: '/api/v1',
+	baseURL: 'https://main.d2eihi72apprns.amplifyapp.com/api/v1',
 });
 
 export default customFetch;

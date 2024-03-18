@@ -31,19 +31,30 @@ app.use(cookieParser());
 app.use(express.json());
 //routes
 
-app.post('/api/v1/test', (req, res) => {
-	const { name } = req.body;
-	res.json({ message: `hello ${name}`, data: req.body });
-});
+app.post(
+	'https://main.d2eihi72apprns.amplifyapp.com/api/v1/test',
+	(req, res) => {
+		const { name } = req.body;
+		res.json({ message: `hello ${name}`, data: req.body });
+	}
+);
 
 app.get('/api/v1/test', (req, res) => {
 	res.json({ message: 'hello' });
 });
 
 //
-app.use('/api/v1/tasks', authenticateUser, taskRouter);
-app.use('/api/v1/users', authenticateUser, userRouter);
-app.use('/api/v1/auth', authRouter);
+app.use(
+	'https://main.d2eihi72apprns.amplifyapp.com//api/v1/tasks',
+	authenticateUser,
+	taskRouter
+);
+app.use(
+	'https://main.d2eihi72apprns.amplifyapp.com/api/v1/users',
+	authenticateUser,
+	userRouter
+);
+app.use('https://main.d2eihi72apprns.amplifyapp.com/api/v1/auth', authRouter);
 app.get('*', (req, res) => {
 	res.sendFile(path.resolve(__dirname, './public', 'index.html'));
 });
