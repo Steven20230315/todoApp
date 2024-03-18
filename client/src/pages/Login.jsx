@@ -1,5 +1,4 @@
 import { Form, Link, redirect } from 'react-router-dom';
-import Logo from '../components/Logo';
 import Wrapper from '../assets/wrappers/RegisterAndLoginPage';
 import FormRow from '../components/FormRow';
 import customFetch from '../utils/customFetch';
@@ -286,9 +285,9 @@ export default function Login() {
 				<button type='submit' className='btn btn-block' disabled={isSubmitting}>
 					{isSubmitting ? 'Loading...' : 'Login'}
 				</button>
-				<button type='button' className='btn btn-block'>
+				{/* <button type='button' className='btn btn-block'>
 					explore the app
-				</button>
+				</button> */}
 				<p>
 					Not a member yet?{' '}
 					<Link to='/register' className='member-btn'>

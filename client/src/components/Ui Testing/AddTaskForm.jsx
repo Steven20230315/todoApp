@@ -1,7 +1,6 @@
 import styles from './AddTaskForm.module.css';
 import { Form } from 'react-router-dom';
 import { useState } from 'react';
-import { TASK_PRIORITY, TASK_STATUS } from '../../../../utils/constants';
 import AddTaskFormStatus from './AddTaskFormStatus';
 import AddTaskFormPriority from './AddTaskFormPriority';
 export default function AddTaskForm({ handleCloseForm }) {
