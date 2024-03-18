@@ -21,7 +21,7 @@ const port = process.env.PORT || 5100;
 
 // Enable CORS for all routes
 app.use(cors());
-app.use(bodyParser.json());
+app.use(express.json());
 
 //middleware
 const __dirname = dirname(fileURLToPath(import.meta.url));
