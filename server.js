@@ -32,7 +32,7 @@ app.use(express.json());
 //routes
 
 app.post(
-	'https://main.d2eihi72apprns.amplifyapp.com/api/v1/test',
+	'/api/v1/test',
 	(req, res) => {
 		const { name } = req.body;
 		res.json({ message: `hello ${name}`, data: req.body });
@@ -45,16 +45,16 @@ app.get('/api/v1/test', (req, res) => {
 
 //
 app.use(
-	'https://main.d2eihi72apprns.amplifyapp.com//api/v1/tasks',
+	'/api/v1/tasks',
 	authenticateUser,
 	taskRouter
 );
 app.use(
-	'https://main.d2eihi72apprns.amplifyapp.com/api/v1/users',
+	'/api/v1/users',
 	authenticateUser,
 	userRouter
 );
-app.use('https://main.d2eihi72apprns.amplifyapp.com/api/v1/auth', authRouter);
+app.use('/api/v1/auth', authRouter);
 app.get('*', (req, res) => {
 	res.sendFile(path.resolve(__dirname, './public', 'index.html'));
 });
