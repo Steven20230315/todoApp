@@ -1,4 +1,5 @@
 import 'express-async-errors';
+import cors from 'cors';
 import * as dotenv from 'dotenv';
 dotenv.config();
 import express, { json } from 'express';
@@ -18,7 +19,9 @@ import taskRouter from './routes/taskRouter.js';
 const app = express();
 const port = process.env.PORT || 5100;
 
-// database
+// Enable CORS for all routes
+app.use(cors());
+app.use(bodyParser.json());
 
 //middleware
 const __dirname = dirname(fileURLToPath(import.meta.url));
