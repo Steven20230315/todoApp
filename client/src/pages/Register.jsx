@@ -11,7 +11,7 @@ export const action = async ({ request }) => {
 	const data = Object.fromEntries(formData);
 	console.log(data);
 	try {
-		await axios.post('/api/v1/auth/register', data);
+		await axios.post('/auth/register', data);
 		// await customFetch.post('/auth/register', data);
 		toast.success('Registered successfully!');
 		return redirect('/login');

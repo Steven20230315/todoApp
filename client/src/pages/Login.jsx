@@ -15,7 +15,7 @@ export const action = async ({ request }) => {
 		return errors;
 	}
 	try {
-		await axios.post('/api/v1/auth/login', data);
+		await axios.post('/auth/login', data);
 		// await customFetch.post('/auth/login', data);
 		toast.success('Logged in successfully!');
 		return redirect('/dashboard');

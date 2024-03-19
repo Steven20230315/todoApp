@@ -14,7 +14,7 @@ export const loader = async (params) => {
 		// Get the filter criteria based on the pathname
 
 		// Fetch tasks and filter based on the criteria
-		const data = await axios.get('/api/v1/tasks');
+		const data = await axios.get('/tasks');
 		// const data = await customFetch.get('/tasks');
 		const tasks = data?.data?.tasks;
 
@@ -31,7 +31,7 @@ export const action = async ({ request, params }) => {
 	let taskId = formData.get('taskId');
 	if (intent === 'complete') {
 		try {
-			await axios.delete(`/api/v1/tasks/${taskId}`, {
+			await axios.delete(`/tasks/${taskId}`, {
 				method: 'DELETE',
 				body: JSON.stringify(formData),
 			});
@@ -48,7 +48,7 @@ export const action = async ({ request, params }) => {
 	}
 	if (intent === 'addTask') {
 		try {
-			await axios.post('/api/v1/tasks', data);
+			await axios.post('/tasks', data);
 			// await customFetch.post('/tasks', data);
 			toast.success('Task added successfully');
 			return { success: true };
@@ -59,7 +59,7 @@ export const action = async ({ request, params }) => {
 	}
 	if (intent === 'addComment') {
 		try {
-			await axios.post(`/api/v1/tasks/${taskId}/comments`, data);
+			await axios.post(`/tasks/${taskId}/comments`, data);
 			// await customFetch.post(`/tasks/${taskId}/comments`, data);
 			toast.success('Comment added successfully');
 			return { success: true };

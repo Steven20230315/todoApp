@@ -45,19 +45,19 @@ app.use(cookieParser());
 app.use(express.json());
 //routes
 
-app.post('/api/v1/test', (req, res) => {
+app.post('/test', (req, res) => {
 	const { name } = req.body;
 	res.json({ message: `hello ${name}`, data: req.body });
 });
 
-app.get('/api/v1/test', (req, res) => {
+app.get('/test', (req, res) => {
 	res.json({ message: 'hello' });
 });
 
 //
-app.use('/api/v1/tasks', authenticateUser, taskRouter);
-app.use('/api/v1/users', authenticateUser, userRouter);
-app.use('/api/v1/auth', authRouter);
+app.use('/tasks', authenticateUser, taskRouter);
+app.use('/users', authenticateUser, userRouter);
+app.use('/auth', authRouter);
 app.get('*', (req, res) => {
 	res.sendFile(path.resolve(__dirname, './public', 'index.html'));
 });
