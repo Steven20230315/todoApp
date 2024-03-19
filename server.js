@@ -23,7 +23,12 @@ const port = process.env.PORT || 5100;
 app.use(
 	cors({
 		credentials: true,
-		origin: 'https://main.d2eihi72apprns.amplifyapp.com/',
+		origin: [
+			'https://main.d2eihi72apprns.amplifyapp.com/',
+			'http://localhost:3000',
+			'https://test-route.d2eihi72apprns.amplifyapp.com/register',
+		],
+		methods: ['GET', 'POST', 'PUT', 'DELETE'],
 	})
 );
 // app.use(cors());
