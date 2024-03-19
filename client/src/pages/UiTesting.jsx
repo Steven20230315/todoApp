@@ -8,13 +8,14 @@ import {
 import customFetch from '../utils/customFetch';
 import { toast } from 'react-toastify';
 import AddTaskBtn from '../components/Ui Testing/AddTaskBtn';
-
+import axios from 'axios';
 export const loader = async (params) => {
 	try {
 		// Get the filter criteria based on the pathname
 
 		// Fetch tasks and filter based on the criteria
-		const data = await customFetch.get('/tasks');
+		const data = await axios.get('/api/v1/tasks');
+		// const data = await customFetch.get('/tasks');
 		const tasks = data?.data?.tasks;
 
 		return { data: tasks };
@@ -30,10 +31,14 @@ export const action = async ({ request, params }) => {
 	let taskId = formData.get('taskId');
 	if (intent === 'complete') {
 		try {
-			await customFetch.delete(`/tasks/${taskId}`, {
+			await axios.delete(`/api/v1/tasks/${taskId}`, {
 				method: 'DELETE',
 				body: JSON.stringify(formData),
 			});
+			// await customFetch.delete(`/tasks/${taskId}`, {
+			// 	method: 'DELETE',
+			// 	body: JSON.stringify(formData),
+			// });
 			toast.success('Task deleted successfully');
 			return { success: true };
 		} catch (error) {
@@ -43,7 +48,8 @@ export const action = async ({ request, params }) => {
 	}
 	if (intent === 'addTask') {
 		try {
-			await customFetch.post('/tasks', data);
+			await axios.post('/api/v1/tasks', data);
+			// await customFetch.post('/tasks', data);
 			toast.success('Task added successfully');
 			return { success: true };
 		} catch (error) {
@@ -53,7 +59,8 @@ export const action = async ({ request, params }) => {
 	}
 	if (intent === 'addComment') {
 		try {
-			await customFetch.post(`/tasks/${taskId}/comments`, data);
+			await axios.post(`/api/v1/tasks/${taskId}/comments`, data);
+			// await customFetch.post(`/tasks/${taskId}/comments`, data);
 			toast.success('Comment added successfully');
 			return { success: true };
 		} catch (error) {
@@ -63,10 +70,14 @@ export const action = async ({ request, params }) => {
 	}
 	if (intent === 'deleteComment') {
 		try {
-			await customFetch.delete(`/tasks/${taskId}/comments/${data.commentId}`, {
+			await axios.delete(`/api/v1/tasks/${taskId}/comments/${data.commentId}`, {
 				method: 'DELETE',
 				body: JSON.stringify(formData),
-			});
+			})
+			// await customFetch.delete(`/tasks/${taskId}/comments/${data.commentId}`, {
+			// 	method: 'DELETE',
+			// 	body: JSON.stringify(formData),
+			// });
 			toast.success('Comment deleted successfully');
 			return { success: true };
 		} catch (error) {
@@ -76,7 +87,8 @@ export const action = async ({ request, params }) => {
 	}
 	if (intent === 'editTask') {
 		try {
-			await customFetch.patch(`/tasks/${taskId}`, data);
+			await axios.patch(`/api/v1/tasks/${taskId}`, data);
+			// await customFetch.patch(`/tasks/${taskId}`, data);
 			toast.success('Task updated successfully');
 			return { success: true };
 		} catch (error) {

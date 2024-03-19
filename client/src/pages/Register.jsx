@@ -4,13 +4,15 @@ import Logo from '../components/Logo';
 import FormRow from '../components/FormRow';
 import customFetch from '../utils/customFetch';
 import { toast } from 'react-toastify';
+import axios from 'axios';
 export const action = async ({ request }) => {
 	console.log(request);
 	const formData = await request.formData();
 	const data = Object.fromEntries(formData);
 	console.log(data);
 	try {
-		await customFetch.post('/auth/register', data);
+		await axios.post('/api/v1/auth/register', data);
+		// await customFetch.post('/auth/register', data);
 		toast.success('Registered successfully!');
 		return redirect('/login');
 	} catch (error) {

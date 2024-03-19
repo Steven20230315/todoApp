@@ -4,6 +4,7 @@ import FormRow from '../components/FormRow';
 import customFetch from '../utils/customFetch';
 import { toast } from 'react-toastify';
 import { useNavigation } from 'react-router-dom';
+import axios from 'axios';
 
 export const action = async ({ request }) => {
 	const formData = await request.formData();
@@ -14,7 +15,8 @@ export const action = async ({ request }) => {
 		return errors;
 	}
 	try {
-		await customFetch.post('/auth/login', data);
+		await axios.post('/api/v1/auth/login', data);
+		// await customFetch.post('/auth/login', data);
 		toast.success('Logged in successfully!');
 		return redirect('/dashboard');
 	} catch (error) {
@@ -163,7 +165,7 @@ export default function Login() {
 																						y='0'
 																						viewBox='10.1 5.2 78.4 90'
 																						enableBackground='new 0 0 100 100'
-																						xmlspace='preserve'
+																						xmlSpace='preserve'
 																						height='82.62169136976277'
 																						width='71.97267337099335'
 																						data-fill-palette-color='quaternary'
